@@ -36,19 +36,7 @@ public class Basket {
     }
 
     public void add(String name, int price, int count) {
-        boolean error = false;
-        if (contains(name)) {
-            error = true;
-        }
-
-        if (totalPrice + count * price >= limit) {
-            error = true;
-        }
-
-        if (error) {
-            System.out.println("Error occured :(");
-            return;
-        }
+        add(name, price, 1, 0);
 
         items = items + "\n" + name + " - " +
                 count + " шт. - " + price;
@@ -56,6 +44,7 @@ public class Basket {
     }
 
     public void add(String name, int price, int count, double weight) {
+
         boolean error = false;
         if (contains(name)) {
             error = true;
@@ -71,9 +60,10 @@ public class Basket {
         }
 
         items = items + "\n" + name + " - " +
-            count + " шт. - " + price;
+            count + " шт. - " + weight * count + " кг - " +
+            price * count + " руб.";
         totalPrice = totalPrice + count * price;
-        totalWeight = totalWeight + weight;
+        totalWeight = totalWeight + count * weight;
     }
 
     public void clear() {
