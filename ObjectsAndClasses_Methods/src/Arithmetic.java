@@ -1,26 +1,28 @@
 public class Arithmetic {
 
-    private int number1 = 4;
-    private int number2 = 5;
+    public static int number1;
+    public static int number2;
 
-    public void Arithmetic(int number1, int number2) {
+    public Arithmetic() {}
+
+    public Arithmetic(int number1, int number2) {
         this.number1 = number1;
         this.number2 = number2;
     }
 
-    public int sum(int a, int b){
-        return a + b;
+    public static void sum(){
+        System.out.println("Sum: " + (number1 + number2));
     }
 
-    public int multiple(int a, int b){
-        return a * b;
+    public static void multiple(){
+        System.out.println("Multiple: " + (number1 * number2));
     }
 
-    public int maxOfTwo(int a, int b){
-        return Math.max(a, b);
+    public static void maxOfTwo(){
+        System.out.println("Max: " + Math.max(number1, number2));
     }
 
-    public int minOfTwo(int a, int b){
-        return Math.min(a, b);
+    public static void minOfTwo(){
+        System.out.println("Min: " + Math.min(number1, number2));
     }
 }
