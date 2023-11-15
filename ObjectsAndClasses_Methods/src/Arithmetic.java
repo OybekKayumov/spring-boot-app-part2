@@ -1,7 +1,7 @@
 public class Arithmetic {
 
-    public static int number1;
-    public static int number2;
+    public int number1;
+    public int number2;
 
     public Arithmetic() {}
 
@@ -10,19 +10,19 @@ public class Arithmetic {
         this.number2 = number2;
     }
 
-    public static void sum(){
+    public void sum(){
         System.out.println("Sum: " + (number1 + number2));
     }
 
-    public static void multiple(){
+    public void multiple(){
         System.out.println("Multiple: " + (number1 * number2));
     }
 
-    public static void maxOfTwo(){
+    public void maxOfTwo(){
         System.out.println("Max: " + Math.max(number1, number2));
     }
 
-    public static void minOfTwo(){
+    public void minOfTwo(){
         System.out.println("Min: " + Math.min(number1, number2));
     }
 }
