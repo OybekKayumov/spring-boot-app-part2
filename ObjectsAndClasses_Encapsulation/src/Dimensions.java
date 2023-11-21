@@ -10,6 +10,37 @@ public class Dimensions {
         this.length = length;
     }
 
+    public double getWidth() {
+        return width;
+    }
+
+    public double getHeight() {
+        return height;
+    }
+
+    public double getLength() {
+        return length;
+    }
+
+    //! SETTERS
+    public Dimensions setWidth(double width) {
+        return new Dimensions(width, height,length);
+    }
+
+    public Dimensions setHeight(double height) {
+        return new Dimensions(width, height, length);
+    }
+
+    public Dimensions setLength(double length) {
+        return new Dimensions(width, height, length);
+    }
+
+    @Override
+    public String toString() {
+        return "width=" + width + ", " + "height=" + height + ", " + "length" +
+                "=" + length;
+    }
+
     public double calcVolume() {
        return width * height * length;
    }
