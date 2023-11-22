@@ -47,6 +47,11 @@ public class Cargo {
                 canTurn, regNum, isFragile);
     }
 
+    public Cargo setDimensions(Dimensions dimensions) {
+        return new Cargo(dimensions,weight, address,
+                canTurn, regNum, isFragile);
+    }
+
     public Cargo setAddress(String address) {
         return new Cargo(dimensions,weight, address,
                 canTurn, regNum, isFragile);
