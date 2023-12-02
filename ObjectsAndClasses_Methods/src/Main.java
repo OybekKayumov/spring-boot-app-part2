@@ -27,6 +27,5 @@ public class Main {
         arithmetic.sum();
         calculations.sum();
         arithmetic.sum();
-
     }
 }

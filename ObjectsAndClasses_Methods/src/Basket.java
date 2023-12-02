@@ -1,6 +1,10 @@
 public class Basket {
 
     private static int count = 0;
+    private static int totalProductCount = 0;
+    private static int totalProductPrice = 0;
+
+    private static int basketCount = 0;
     private String items = "";
     private int totalPrice = 0;
     private int limit;
@@ -8,6 +12,7 @@ public class Basket {
 
     public Basket() {
         increaseCount(1);
+        basketCount = basketCount + 1;
         items = "Список товаров:";
         this.limit = 1000000;
     }
@@ -89,5 +94,23 @@ public class Basket {
 
     public double getTotalWeight(double totalWeight) {
         return totalWeight;
+    }
+
+    public static void increaseTotalValues(int price, int count) {
+        totalProductCount = totalProductCount + count;
+        totalProductPrice = totalProductPrice + count * price;
+    }
+
+
+    public static int getAverageProductPrice() {
+        return totalProductPrice / totalProductCount;
+    }
+
+    public static int getAverageBasketPrice() {
+        return totalProductPrice / basketCount;
+    }
+
+    public static int getBasketCount() {
+        return basketCount;
     }
 }
