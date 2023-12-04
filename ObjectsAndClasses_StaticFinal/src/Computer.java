@@ -84,14 +84,6 @@ public class Computer {
 
     @Override
     public String toString() {
-//        return "Характеристики компьютера: " + "\n" +
-//                "Производитель: " + vendor + "\n" +
-//                "Название: " + name + "\n" +
-//                "Процессор: " + processor + "\n" +
-//                "Оперативная память: " + ram + "\n" +
-//                "Накопитель: " + storage + "\n" +
-//                "Экран: " + screen + "\n" +
-//                "Клавиатура: " + keyboard;
 
         return "Характеристики компьютера: " + "\n" +
                 "Производитель: " + vendor + "\n" +
