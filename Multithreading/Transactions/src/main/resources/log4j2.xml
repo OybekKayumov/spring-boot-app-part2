@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<configuration status="INFO">
+    <appenders>
+        <File name="TransactionCompleted"
+              fileName="logs/transaction_completed.log">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+            <Filters>
+                <ThresholdFilter level="warn" onMatch="DENY" onMismatch="NEUTRAL"/>
+            </Filters>
+        </File>
+
+        <File name="TransactionErrors"
+              fileName="logs/transaction_errors.log">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+            <Filters>
+                <ThresholdFilter level="error" onMatch="DENY"
+                                 onMismatch="NEUTRAL"/>
+            </Filters>
+        </File>
+
+        <File name="TransactionExceptions"
+              fileName="logs/transaction_exceptions.log">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+            <Filters>
+                <ThresholdFilter level="fatal" onMatch="DENY"
+                                 onMismatch="NEUTRAL"/>
+            </Filters>
+        </File>
+    </appenders>
+
+    <loggers>
+        <root level="INFO">
+            <appender-ref ref="TransactionCompleted" level="info" />
+            <appender-ref ref="TransactionErrors" level="warn" />
+            <appender-ref ref="TransactionExceptions" level="error" />
+        </root>
+    </loggers>
+</configuration>
