@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.6.xsd">
+
+    <changeSet id="create-news-table" author="skillbox">
+        <createTable tableName="news">
+            <column name="news_id" type="bigint" autoIncrement="true">
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+            <column name="category_id" type="bigint"/>
+            <column name="title" type="varchar(64)"/>
+            <column name="text" type="varchar(200)"/>
+            <column name="creation_date" type="timestamp(6)"/>
+
+        </createTable>
+    </changeSet>
+</databaseChangeLog>
